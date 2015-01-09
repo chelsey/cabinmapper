@@ -1,0 +1,128 @@
+@font-face {
+  font-family: Inconsolata;
+  src: url("Inconsolata/Inconsolata.otf") format("opentype");
+}
+
+
+html { height: 100%; }
+
+body {
+  height: 95%;
+  margin: 0;
+  padding: 0;
+/*  background: -moz-radial-gradient(center, ellipse cover, #BAD5F4 0%, #BAD5F4 10%, #C8DEB0 20%, #f9f2e0 80%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #BAD5F4), color-stop(10%, #BAD5F4), color-stop(20%, #C8DEB0), color-stop(80%, #f9f2e0));
+  background: -webkit-radial-gradient(center, ellipse cover, #BAD5F4 0%, #BAD5F4 10%, #C8DEB0 20%, #f9f2e0 80%);
+  background: -o-radial-gradient(center, ellipse cover, #BAD5F4 0%, #BAD5F4 10%, #C8DEB0 20%, #f9f2e0 80%);
+  background: -ms-radial-gradient(center, ellipse cover, #BAD5F4 0%, #BAD5F4 10%, #C8DEB0 20%, #f9f2e0 80%);
+  background: radial-gradient(ellipse at center, #BAD5F4 0%, #BAD5F4 10%, #C8DEB0 20%, #f9f2e0 80%);
+  background-size: 4px 4px;*/
+}
+
+.fixed-navbar {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  height: 65px;
+  background-color: #F9F2E0;
+  z-index: 100;
+  box-shadow: 0 3px 5px #97A5B5;
+  font-family: Inconsolata;
+  color: #757575;
+}
+
+.brand {
+  float: left;
+  margin: auto;
+  min-width: 250px;
+}
+
+.logo {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 25px;
+  max-width: 200px;
+  float: left;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: #757575;
+}
+
+.right-navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float: right;
+  text-align: center;
+  padding-right: 100px;
+}
+
+.right-navigation ul li {
+  font-size: 20px;
+  font-weight: 600;
+  list-style-type: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.right-navigation ul li {
+  display: none;
+  box-shadow: 0 3px 5px #97A5B5;
+  padding: 20px 10px 20px 10px;
+  border-bottom: 1px solid #97A5B5;
+  background-color: #F9F2E0;
+  font-size: 15px;
+}
+
+.right-navigation ul li:hover {
+  background-color: white;
+  padding-right: 0;
+}
+
+.right-navigation ul li:hover > ul > li {
+  display: block;
+}
+
+li:first-child {
+  margin-top: 21px;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li:hover {
+  background-color: white;
+}
+
+/*li:first-child:hover {
+  border-top: 1px solid #97A5B5;
+}
+*/
+#map-canvas-div {
+  top: 65px;
+  width: 90%;
+  height: 80%;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+
+  #757575
+  #868C94
+  #8E99A5
+  #97A5B5 # navbar shadow
+  #D4C297
+  #BCAD76
+  #9F8753
+  #E4E0DA
+  #6493C8
+  #285E9A
+
+
