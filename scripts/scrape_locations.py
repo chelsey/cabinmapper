@@ -27,6 +27,7 @@ with open("../data/scraped.tsv", "w") as f:
   output = csv.writer(f, delimiter="\t")
   output.writerow(fieldnames)
 
+  print "Scraping urls...."
   for url in my_list:
 
     cabin_page_url = url
@@ -35,12 +36,14 @@ with open("../data/scraped.tsv", "w") as f:
     photo_content = soup.find_all("div", "photo")
 
     number_of_photos_divs = len(photo_content)
-
-    print url
-    print "Number of photos on page {0}: ".format(number_of_photos_divs)
+    print url + "\t" + "Number of photos on page: {0} ".format(number_of_photos_divs)
 
     for item in photo_content:
-      caption = item.find("div", "caption").find("p")
+
+      if item.find("div", "caption"):
+        caption = item.find("div", "caption").find("p")
+      else:
+        caption = ""
 
       if caption:
         caption_text = caption.text.encode('utf-8')

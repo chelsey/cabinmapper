@@ -16,7 +16,7 @@ def geocode_location(address):
 with open("../data/scraped.tsv", "r") as f:
     reader = csv.DictReader(f, delimiter="\t")
 
-    print "Starting conversion to Lat & Lng"
+    print "Converting locations to Lat & Lng..." + "\n" + "\n"
 
     with open("../data/scraped-geocoded.tsv", "w") as w:
         fields = ["location", "cabin url", "image url", "caption", "lat", "lng", "cabin_page_url"]
@@ -37,9 +37,9 @@ with open("../data/scraped.tsv", "r") as f:
                 line["lat"] = ""
                 line["lng"] = ""
                 print "FAILURE"
-                print "location: {0}".format(line["location"])
-                print "caption: '{0}' ".format(line["caption"])
-                print "URL: {0}".format(line["cabin_page_url"])
+                print "\t" + "location: {0}".format(line["location"])
+                print "\t" + "caption: '{0}' ".format(line["caption"])
+                print "\t" + "URL: {0}".format(line["cabin_page_url"])
             sleep(1)
             writer.writerow(line)
 

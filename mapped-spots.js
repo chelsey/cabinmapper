@@ -52,19 +52,24 @@ function initialize() {
 
   // If navigator.geolocation, use that as initialMapOptions
 
-  // Geolocation - in case someone wants to go to their current location and browse around nearby
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition( function(position) {
-      userLatLong = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-      initialMarker = new google.maps.Marker({
-        position: userLatLong,
-        map: map,
-        icon: 'http://www.google.com/mapfiles/ms/micons/orange.png',
-        title: "You're here"
+  $('.current-location').on('click', function() {
+    // Geolocation - in case someone wants to go to their current location and browse around nearby
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition( function(position) {
+        userLatLong = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        userZoom = 8;
+        initialMarker = new google.maps.Marker({
+          position: userLatLong,
+          map: map,
+          icon: 'http://www.google.com/mapfiles/ms/micons/orange.png',
+          title: "You're here",
+        });
+        map.setCenter(userLatLong);
+        map.setZoom(userZoom);
       });
-      map.setCenter(userLatLong);
-    });
-  }
+    }
+  })
+
 
   // Geolocation - the centering when someone clicks on a specific continent from the DOM dropdown
   $(".specific-continent").on('click', function() {
