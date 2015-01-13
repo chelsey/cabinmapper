@@ -82,7 +82,7 @@ a {
   margin: 0;
   padding: 0;
   text-align: center;
-  margin-right: 100px;
+  margin-right: 20px;
 }
 
 .right-navigation ul li {
@@ -130,10 +130,39 @@ li:hover {
 
 #map-canvas-div {
   top: 66px;
-  width: 90%;
-  height: 80%;
+  width: 95%;
+  height: 87%;
   margin: 30px auto;
   border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 767px) {
+  .fixed-navbar {
+    height: 44px;
+  }
+
+  .brand {
+    margin-left: 30px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .right-navigation ul {
+    margin-right: 30px;
+  }
+
+/*  .right-navigation ul li {
+    width: 75px;
+  }*/
+
+  #map-canvas-div {
+    top: 44px;
+  }
 }
 
 

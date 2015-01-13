@@ -11,6 +11,7 @@
 from bs4 import BeautifulSoup
 from urllib2 import urlopen
 import csv
+import re
 
 BASE_URL = "http://cabinporn.com/page/"
 
@@ -59,6 +60,13 @@ with open("../data/scraped.tsv", "w") as f:
 
       if caption and caption.find("strong"):
         location = caption.find("strong").text.encode('utf-8')
+        print location
+      elif caption:
+        line = caption_text
+        regex_location = re.search(r'([A-Z][a-z]*|[A-Z][a-z]+(?=\s[A-Z])(?:\s[A-Z][a-z]+)+)*,\S*(?:\s[A-Z][a-z]*[a-zA-Z]+|\s[A-Z][a-z]+(?=\s[A-Z])(?:\s[A-Z][a-z]+)+)*', line)
+        if regex_location != None:
+          location = regex_location.group(0)
+          print location
       else:
         location = ""
 

@@ -12,7 +12,8 @@ var continentList = {
 
 // Setup for the Fusion Table
 var tableSetup = {
-  tableid: "1Ay8W3xm9KDz-gbyoWe9Gcax-lUe_hEkDgOtiSdYW",
+  // tableid: "1Ay8W3xm9KDz-gbyoWe9Gcax-lUe_hEkDgOtiSdYW",
+  tableid: "18BmgVXoIx8taWl-l0BPqz4hEzTQeUF1di_c-hgyK",
   tableSelection: "lat",
   icon: "schools"
 };
