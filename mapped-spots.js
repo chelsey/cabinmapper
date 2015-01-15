@@ -13,7 +13,7 @@ var continentList = {
 // Setup for the Fusion Table
 var tableSetup = {
   // tableid: "1Ay8W3xm9KDz-gbyoWe9Gcax-lUe_hEkDgOtiSdYW",
-  tableid: "18BmgVXoIx8taWl-l0BPqz4hEzTQeUF1di_c-hgyK",
+  tableid: "1wyZt40op_meNqhbXRau8POam0GzvWa3MKmUHR9KC",
   tableSelection: "lat",
   icon: "schools"
 };
@@ -22,16 +22,18 @@ var tableSetup = {
 var initialMapOptions = {
   center: new google.maps.LatLng(continentList.nZed.lat, continentList.nZed.lng),
   zoom: continentList.nZed.zoom,
-  zoomControl: true,
-  zoomControlOptions: {
-    position: google.maps.ControlPosition.LEFT_BOTTOM
-  }
+  zoomControl: true
 };
 
 // Initialize map
 function initialize() {
   var styledMap = new google.maps.StyledMapType(moonriseKingdomStyles);
   var map = new google.maps.Map(document.getElementById("map-canvas-div"), initialMapOptions);
+
+  // Create the search box and link it to the UI element.
+  var input = document.getElementById('pac-input');
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+  var searchBox = new google.maps.places.SearchBox(input);
 
   // Associate the styled map with the MapTypeId and set it to display.
   map.mapTypes.set("map_style", styledMap);
@@ -52,7 +54,6 @@ function initialize() {
   });
 
   // If navigator.geolocation, use that as initialMapOptions
-
   $('.current-location').on('click', function() {
     // Geolocation - in case someone wants to go to their current location and browse around nearby
     if (navigator.geolocation) {
@@ -69,8 +70,7 @@ function initialize() {
         map.setZoom(userZoom);
       });
     }
-  })
-
+  });
 
   // Geolocation - the centering when someone clicks on a specific continent from the DOM dropdown
   $(".specific-continent").on('click', function() {
@@ -80,6 +80,26 @@ function initialize() {
     map.setZoom(continentClicked.zoom);
     map.setCenter(continentClickedLatLong);
   });
+
+  // Listen for the event fired when the user selects an item from the
+  // pick list. Retrieve the matching places for that item.
+  google.maps.event.addListener(searchBox, 'places_changed', function() {
+    var places = searchBox.getPlaces();
+
+    if (places.length === 0) {
+      return;
+    }
+
+    var bounds = new google.maps.LatLngBounds();
+
+    for (var i = 0, place; place = places[i]; i++) {
+      bounds.extend(place.geometry.location);
+    }
+
+    map.fitBounds(bounds);
+    map.setZoom(8);
+  });
+
 }
 
 google.maps.event.addDomListener(window, 'load', function(){initialize();});
