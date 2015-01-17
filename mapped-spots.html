@@ -20,7 +20,8 @@
           Cabins Mapped
         </div>
       </div>
-      <div class="right-navigation">
+
+      <div class="right-navigation lg-md-dropdown">
         <ul>
           <li><a href="#">Continents</a>
             <ul>
@@ -36,8 +37,25 @@
           <li><a class="current-location" href="#">Current Location</a></li>
         </ul>
       </div>
+
+      <div class="right-navigation sm-xs-dropdown">
+        <ul>
+          <li><a href="#">Locations</a>
+            <ul>
+              <li class="current-location"> <a href="#">Your Location</a></li>
+              <li class="specific-continent" id="africa"><a href="#">Africa</a></li>
+              <li class="specific-continent" id="antartica"><a href="#">Antartica</a></li>
+              <li class="specific-continent" id="asia"><a href="#">Asia</a></li>
+              <li class="specific-continent" id="australia"><a href="#">Australia</a></li>
+              <li class="specific-continent" id="europe"><a href="#">Europe</a></li>
+              <li class="specific-continent" id="nAmerica"><a href="#">N. America</a></li>
+              <li class="specific-continent" id="sAmerica"><a href="#">S. America</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <input id="location-search-box" class="controls" type="text" placeholder="Search Box">
     <div id="map-canvas-div"></div>
   </body>
 </html>

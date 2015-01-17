@@ -14,7 +14,7 @@ var continentList = {
 var tableSetup = {
   // tableid: "1Ay8W3xm9KDz-gbyoWe9Gcax-lUe_hEkDgOtiSdYW",
   tableid: "1wyZt40op_meNqhbXRau8POam0GzvWa3MKmUHR9KC",
-  tableSelection: "lat",
+  querySelection: "lat",
   icon: "schools"
 };
 
@@ -31,7 +31,7 @@ function initialize() {
   var map = new google.maps.Map(document.getElementById("map-canvas-div"), initialMapOptions);
 
   // Create the search box and link it to the UI element.
-  var input = document.getElementById('pac-input');
+  var input = document.getElementById('location-search-box');
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
   var searchBox = new google.maps.places.SearchBox(input);
 
@@ -50,12 +50,15 @@ function initialize() {
         iconName: tableSetup.icon
       }
     }],
-    map: map
+    map: map,
+    options: {
+      templateId: 3
+    }
   });
 
-  // If navigator.geolocation, use that as initialMapOptions
+  // Geolocation upon navbar div click - in case someone wants to go to their current location and browse nearby
   $('.current-location').on('click', function() {
-    // Geolocation - in case someone wants to go to their current location and browse around nearby
+
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition( function(position) {
         userLatLong = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);

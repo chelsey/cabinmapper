@@ -71,6 +71,10 @@ body {
   transform: translateY(-50%);
 }
 
+.sm-xs-dropdown {
+  display: none;
+}
+
 a {
   text-decoration: none;
   color: #757575;
@@ -132,11 +136,8 @@ li:hover {
   top: 66px;
   width: 95%;
   height: 87%;
-  margin: 30px auto;
+  margin: 40px auto;
   border-radius: 10px;
-}
-
-@media (max-width: 1024px) {
 }
 
 @media (max-width: 767px) {
@@ -145,37 +146,59 @@ li:hover {
   }
 
   .brand {
-    margin-left: 30px;
+    margin-left: 20px;
   }
 
   .logo {
     font-size: 18px;
   }
 
-  .right-navigation ul {
-    margin-right: 30px;
+  .lg-md-dropdown {
+    display: none;
+  }
+
+  .sm-xs-dropdown {
+    display: inline-block;
+  }
+
+  .right-navigation ul li {
+    width: 90px;
+    height: 15px;
+    padding: 15px 10px;
+  }
+
+  .right-navigation ul li .current-location {
+    padding: 15px 10px;
+  }
+
+  .right-navigation ul li .specific-continent {
+    padding: 15px 10px;
   }
 
   #map-canvas-div {
     top: 44px;
   }
+
+  #location-search-box {
+    display: none;
+  }
 }
 
-#pac-input {
+#location-search-box {
   background-color: #fff;
   padding: 0 11px 0 13px;
-  width: 400px;
-  font-family: Roboto;
+  width: 300px;
+  font-family: Inconsolata;
   font-size: 15px;
   font-weight: 300;
   text-overflow: ellipsis;
 }
 
-#pac-input:focus {
+#location-search-box:focus {
   border-color: #4d90fe;
   margin-left: -1px;
   padding-left: 14px;  /* Regular padding-left + 1. */
-  width: 401px;
+  width: 301px;
 }
 
 .controls {
@@ -190,7 +213,7 @@ li:hover {
 }
 
 .pac-container {
-  font-family: Roboto;
+  font-family: Inconsolata;
 }
 
 #type-selector {
@@ -200,9 +223,9 @@ li:hover {
 }
 
 #type-selector label {
-  font-family: Roboto;
+  font-family: Inconsolata;
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 
