@@ -1,6 +1,6 @@
 @font-face {
   font-family: Inconsolata;
-  src: url("Inconsolata/Inconsolata.otf") format("opentype");
+  src: url("fonts/Inconsolata/Inconsolata.otf") format("opentype");
 }
 
 
@@ -140,50 +140,6 @@ li:hover {
   border-radius: 10px;
 }
 
-@media (max-width: 767px) {
-  .fixed-navbar {
-    height: 44px;
-  }
-
-  .brand {
-    margin-left: 20px;
-  }
-
-  .logo {
-    font-size: 18px;
-  }
-
-  .lg-md-dropdown {
-    display: none;
-  }
-
-  .sm-xs-dropdown {
-    display: inline-block;
-  }
-
-  .right-navigation ul li {
-    width: 90px;
-    height: 15px;
-    padding: 15px 10px;
-  }
-
-  .right-navigation ul li .current-location {
-    padding: 15px 10px;
-  }
-
-  .right-navigation ul li .specific-continent {
-    padding: 15px 10px;
-  }
-
-  #map-canvas-div {
-    top: 44px;
-  }
-
-  #location-search-box {
-    display: none;
-  }
-}
-
 #location-search-box {
   background-color: #fff;
   padding: 0 11px 0 13px;
@@ -228,6 +184,49 @@ li:hover {
   font-weight: 500;
 }
 
+@media (max-width: 767px) {
+  .fixed-navbar {
+    height: 44px;
+  }
+
+  .brand {
+    margin-left: 20px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .lg-md-dropdown {
+    display: none;
+  }
+
+  .sm-xs-dropdown {
+    display: inline-block;
+  }
+
+  .right-navigation ul li {
+    width: 90px;
+    height: 15px;
+    padding: 15px 10px;
+  }
+
+  .right-navigation ul li .current-location {
+    padding: 15px 10px;
+  }
+
+  .right-navigation ul li .specific-continent {
+    padding: 15px 10px;
+  }
+
+  #map-canvas-div {
+    top: 44px;
+  }
+
+  #location-search-box {
+    display: none;
+  }
+}
 
   #757575
   #868C94

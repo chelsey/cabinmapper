@@ -12,8 +12,7 @@ var continentList = {
 
 // Setup for the Fusion Table
 var tableSetup = {
-  // tableid: "1Ay8W3xm9KDz-gbyoWe9Gcax-lUe_hEkDgOtiSdYW",
-  tableid: "1wyZt40op_meNqhbXRau8POam0GzvWa3MKmUHR9KC",
+  tableId: "1wyZt40op_meNqhbXRau8POam0GzvWa3MKmUHR9KC",
   querySelection: "lat",
   icon: "schools"
 };
@@ -43,7 +42,7 @@ function initialize() {
   var layer = new google.maps.FusionTablesLayer({
     query: {
       select: tableSetup.querySelection,
-      from: tableSetup.tableid
+      from: tableSetup.tableId
     },
     styles: [{
       markerOptions: {
@@ -57,8 +56,8 @@ function initialize() {
   });
 
   // Geolocation upon navbar div click - in case someone wants to go to their current location and browse nearby
-  $('.current-location').on('click', function() {
-
+  $('.js-current-location').on('click', function() {
+    console.log("foo");
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition( function(position) {
         userLatLong = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
@@ -76,7 +75,7 @@ function initialize() {
   });
 
   // Geolocation - the centering when someone clicks on a specific continent from the DOM dropdown
-  $(".specific-continent").on('click', function() {
+  $(".js-specific-continent").on('click', function() {
     var continentClicked = continentList[this.id];
     continentClickedLatLong = new google.maps.LatLng(continentClicked.lat, continentClicked.lng);
 
@@ -106,6 +105,3 @@ function initialize() {
 }
 
 google.maps.event.addDomListener(window, 'load', function(){initialize();});
-
-
-
