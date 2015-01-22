@@ -3,20 +3,12 @@
   src: url("fonts/Inconsolata/Inconsolata.otf") format("opentype");
 }
 
-
 html { height: 100%; }
 
 body {
   height: 95%;
   margin: 0;
   padding: 0;
-/*  background: -moz-radial-gradient(center, ellipse cover, #BAD5F4 0%, #BAD5F4 10%, #C8DEB0 20%, #f9f2e0 80%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #BAD5F4), color-stop(10%, #BAD5F4), color-stop(20%, #C8DEB0), color-stop(80%, #f9f2e0));
-  background: -webkit-radial-gradient(center, ellipse cover, #BAD5F4 0%, #BAD5F4 10%, #C8DEB0 20%, #f9f2e0 80%);
-  background: -o-radial-gradient(center, ellipse cover, #BAD5F4 0%, #BAD5F4 10%, #C8DEB0 20%, #f9f2e0 80%);
-  background: -ms-radial-gradient(center, ellipse cover, #BAD5F4 0%, #BAD5F4 10%, #C8DEB0 20%, #f9f2e0 80%);
-  background: radial-gradient(ellipse at center, #BAD5F4 0%, #BAD5F4 10%, #C8DEB0 20%, #f9f2e0 80%);
-  background-size: 4px 4px;*/
 }
 
 .fixed-navbar {
@@ -132,10 +124,34 @@ li:hover {
   background-color: white;
 }
 
+.fixed-footer {
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  height: 55px;
+  background-color: #F9F2E0;
+  z-index: 100;
+  box-shadow: 0 -1px 5px #97A5B5;
+  font-family: Inconsolata;
+  color: #757575;
+}
+
+.footer-text {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+.my-sig {
+  display: inline-block;
+  float: right;
+  padding-right: 30px;
+}
+
 #map-canvas-div {
   top: 66px;
   width: 95%;
-  height: 87%;
+  height: 80%;
   margin: 40px auto;
   border-radius: 10px;
 }
