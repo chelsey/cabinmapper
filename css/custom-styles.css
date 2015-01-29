@@ -1,6 +1,6 @@
 @font-face {
   font-family: Inconsolata;
-  src: url("fonts/Inconsolata/Inconsolata.otf") format("opentype");
+  src: url('fonts/Inconsolata/Inconsolata.otf') format('opentype');
 }
 
 html { height: 100%; }
