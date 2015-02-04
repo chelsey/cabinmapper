@@ -38,7 +38,7 @@ with open('../data/scraped.tsv', 'r') as f:
                 line['lng'] = ''
                 print 'FAILURE'
                 print '\t' + 'location: {0}'.format(line['location'])
-                print '\t' + 'caption: '{0}' '.format(line['caption'])
+                print '\t' + 'caption: {0}'.format(line['caption'])
                 print '\t' + 'URL: {0}'.format(line['cabin_page_url'])
             sleep(1)
             writer.writerow(line)
