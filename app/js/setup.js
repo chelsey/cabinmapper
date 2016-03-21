@@ -12,7 +12,7 @@ var continents = {
 
   initialSetup = {
     // Setup for the Fusion Table
-    tableId: '1wyZt40op_meNqhbXRau8POam0GzvWa3MKmUHR9KC',
+    tableId: '1BJaVBt_U-glmimNfFzkMFYX57X3ipS3oNFH0oq5e',
     querySelection: 'lat',
     icon: 'schools',
 

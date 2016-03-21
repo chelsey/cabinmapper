@@ -23,7 +23,7 @@ my_list = []
 for count in range(1, 133):
   my_list.append(BASE_URL + str(count))
 
-with open('../data/scraped.tsv', 'w') as f:
+with open('../data/scraped_locations.tsv', 'w') as f:
   fieldnames = ('location', 'cabin url', 'image url', 'caption', 'cabin_page_url')
   output = csv.writer(f, delimiter='\t')
   output.writerow(fieldnames)

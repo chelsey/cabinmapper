@@ -10,6 +10,10 @@ Live app can be found at: http://cabinmapper.herokuapp.com/
 
 ### Scraping & Geolocating
 
-Each cabin and its information needs to be written to a `.tsv` file. One piece of information for each cabin is location. The location needs to be geocoded (via the Google Geocoding API) to return a latitude/longitude for plotting the cabin on a map. 
+Each cabin and its information needs to be written to a `.tsv` file. One piece of information for each cabin is location. The location needs to be geocoded (via the Google Geocoding API) to return a latitude/longitude for plotting the cabin on a map.
 
-Both steps can be done via running the command `python main_script.py` from within the `./scripts` directory
+Both steps can be done via running the command `python main.py` from within the `./scripts` directory
+
+###
+
+https://www.google.com/fusiontables/DataSource?docid=1wyZt40op_meNqhbXRau8POam0GzvWa3MKmUHR9KC

@@ -18,7 +18,7 @@ with open('../data/scraped.tsv', 'r') as f:
 
     print 'Converting locations to Lat & Lng...' + '\n' + '\n'
 
-    with open('../data/scraped-geocoded.tsv', 'w') as w:
+    with open('../data/geocoded_locations.tsv', 'w') as w:
         fields = ['location', 'cabin url', 'image url', 'caption', 'lat', 'lng', 'cabin_page_url']
         writer = csv.DictWriter(w, fieldnames=fields, delimiter='\t')
         writer.writeheader()
