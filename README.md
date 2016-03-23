@@ -16,4 +16,4 @@ Both steps can be done via running the command `python main.py` from within the 
 
 ###
 
-https://www.google.com/fusiontables/DataSource?docid=1wyZt40op_meNqhbXRau8POam0GzvWa3MKmUHR9KC
+https://www.google.com/fusiontables/DataSource?docid=1BJaVBt_U-glmimNfFzkMFYX57X3ipS3oNFH0oq5e

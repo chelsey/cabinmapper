@@ -11,6 +11,32 @@ body {
   padding: 0;
 }
 
+/*Google info window styles*/
+/*.gm-style-iw {
+}*/
+
+.googft-info-window {
+  overflow-y: auto;
+}
+
+.googft-info-window .img-div {
+  float: left;
+}
+
+.googft-info-window .img-div img {
+  height:100px;
+  padding-right: 1em;
+  margin-top: 6px;
+}
+
+.googft-info-window  .content-div {
+  margin-top: 6px;
+  float: right;
+  width: 155px;
+}
+
+/*Site styles*/
+
 .fixed-navbar {
   top: 0;
   width: 100%;
